@@ -17,9 +17,8 @@ public class CalculatorController {
     }
  //   @GetMapping(path = "/calculator/plus")
  @RequestMapping(path =   "/plus")
-    public String summ (@RequestParam("num1") String n1, @RequestParam("num2") String n2) throws Exception {
-     //   return calculatorService.isNull(n1,n2);
-        return calculatorService.summ(n1,n2);
+    public String plus (@RequestParam("num1") String n1, @RequestParam("num2") String n2) throws Exception {
+        return calculatorService.plus(n1,n2);
     }
     @RequestMapping(path =   "/minus")
     public String minus (@RequestParam("num1") String n1, @RequestParam("num2") String n2)  throws Exception {

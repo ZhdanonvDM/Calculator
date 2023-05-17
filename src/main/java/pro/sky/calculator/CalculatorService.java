@@ -6,7 +6,7 @@ public class CalculatorService {
     public String hello () {
         return "Добро пожаловать в калькулятор";
     }
-    public String summ (String n1, String n2) throws Exception {
+    public String plus (String n1, String n2) throws Exception {
         if (n1.equals("") || n2.equals("")) {
             throw new Exception ("Отсутствует один или оба оператора");
         } else {
@@ -29,7 +29,7 @@ public class CalculatorService {
     }
     public String divide (String n1, String n2) throws Exception {
         if (n2.equals("0")) {
-            throw new Exception ("Нельзя делить на ноль");
+            throw new IllegalArgumentException ("Нельзя делить на ноль");
         } else if (n1.equals("") || n2.equals("")) {
             throw new Exception ("Отсутствует один или оба оператора");
         }  else {
