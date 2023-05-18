@@ -6,34 +6,34 @@ public class CalculatorService {
     public String hello () {
         return "Добро пожаловать в калькулятор";
     }
-    public String plus (String n1, String n2) throws Exception {
-        if (n1.equals("") || n2.equals("")) {
+    public Integer plus (Integer n1, Integer n2) throws Exception {
+        if (n1 == null || n2 == null) {
             throw new Exception ("Отсутствует один или оба оператора");
         } else {
-            return n1 + " + " + n2 + " = " + String.valueOf(Integer.valueOf(n1) + Integer.valueOf(n2));
+            return n1+n2;
         }
     }
-    public String minus (String n1, String n2)  throws Exception {
-        if (n1.equals("") || n2.equals("")) {
+    public Integer minus (Integer n1, Integer n2)  throws Exception {
+        if (n1 == null || n2 == null) {
             throw new Exception ("Отсутствует один или оба оператора");
         } else {
-            return n1 + " - " + n2 + " = " + String.valueOf(Integer.valueOf(n1) - Integer.valueOf(n2));
+            return n1-n2;
         }
     }
-    public String multiply (String n1, String n2) throws Exception {
-        if (n1.equals("") || n2.equals("")) {
+    public Integer multiply (Integer n1, Integer n2) throws Exception {
+        if (n1 == null || n2 == null) {
             throw new Exception ("Отсутствует один или оба оператора");
         } else {
-            return n1 + " * " + n2 + " = " + String.valueOf(Integer.valueOf(n1) * Integer.valueOf(n2));
+            return n1*n2;
         }
     }
-    public String divide (String n1, String n2) throws Exception {
-        if (n2.equals("0")) {
+    public Integer divide (Integer n1, Integer n2) throws Exception {
+        if (n2 == 0) {
             throw new IllegalArgumentException ("Нельзя делить на ноль");
-        } else if (n1.equals("") || n2.equals("")) {
+        } else if (n1 == null || n2 == null) {
             throw new Exception ("Отсутствует один или оба оператора");
         }  else {
-            return n1 + " / " + n2 + " = " + String.valueOf(Integer.valueOf(n1) / Integer.valueOf(n2));
+            return n1 / n2;
         }
     }
 }
